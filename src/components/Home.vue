@@ -1,0 +1,131 @@
+<template>
+    <main>
+        <div class="title">
+            <h1>Hi, I am Rafael Policher</h1>
+            <h1 class="writer">
+                <span class="typed-text">{{ typeValue }}</span>
+                <span class="blinking-cursor">|</span>
+                <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+            </h1>
+            <div class="social">
+                <ul>
+                    <li><a href="">Linkedin</a></li>
+                    <li><a href="">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../../public/img/photo.jpg" alt="">
+        </div>
+        
+    </main>
+</template>
+
+<script>
+export default {
+    data: () => {
+    return {
+      typeValue: "",
+      typeStatus: false,
+      displayTextArray: ["Front-End Developer", "Web Developer"],
+      typingSpeed: 100,
+      erasingSpeed: 100,
+      newTextDelay: 2000,
+      displayTextArrayIndex: 0,
+      charIndex: 0,
+    }
+  },
+  methods: {
+    typeText() {
+      if (this.charIndex < this.displayTextArray[this.displayTextArrayIndex].length) {
+        if (!this.typeStatus) this.typeStatus = true;
+        this.typeValue += this.displayTextArray[this.displayTextArrayIndex].charAt(
+          this.charIndex
+        );
+        this.charIndex += 1;
+        setTimeout(this.typeText, this.typingSpeed);
+      } else {
+        this.typeStatus = false;
+        setTimeout(this.eraseText, this.newTextDelay);
+      }
+    },
+    eraseText() {
+      if (this.charIndex > 0) {
+        if (!this.typeStatus) this.typeStatus = true;
+        this.typeValue = this.displayTextArray[this.displayTextArrayIndex].substring(
+          0,
+          this.charIndex - 1
+        );
+        this.charIndex -= 1;
+        setTimeout(this.eraseText, this.erasingSpeed);
+      } else {
+        this.typeStatus = false;
+        this.displayTextArrayIndex += 1;
+        if (this.displayTextArrayIndex >= this.displayTextArray.length)
+          this.displayTextArrayIndex = 0;
+        setTimeout(this.typeText, this.typingSpeed + 1000);
+      }
+    },
+  },
+  created() {
+   setTimeout(this.typeText, this.newTextDelay + 200);
+},
+}
+</script>
+
+<style scoped>
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+h1, .writer{
+    color:#6C0094;
+    margin-left: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+}
+/*.writer::after{
+    content: "|";
+    margin-left: 5px;
+    opacity: 1;
+    color: grey;
+    background-color: grey;
+    animation: blink 1s infinite
+}*/
+.blinking-cursor{
+    color: gray;
+    animation: blink 1s infinite
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+ul{
+    justify-content: center;
+}
+.social{
+    margin-top: 1rem;
+}
+a{
+    border: 1px solid #0F9410
+;
+    border-radius: 10px;
+    padding: .5rem 3rem;
+}
+a:hover{
+    background: #6C0094;
+    color: black;
+}
+img{
+    height: 15rem;
+    border-radius: 50%;
+    margin-right: 5rem;
+}
+
+</style>
