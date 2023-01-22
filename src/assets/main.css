@@ -4,3 +4,19 @@
   text-decoration: none;
   background: black;
 }
+li{
+  list-style: none;
+}
+section{
+  border-bottom: 1px solid #0F9410;
+  box-sizing: border-box;
+}
+h2{
+  color:#6C0094;
+  margin-left: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;    
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}

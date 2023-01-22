@@ -79,6 +79,7 @@ main{
     justify-content: space-between;
     align-items: center;
     height: 80vh;
+    border-bottom: 1px solid #0F9410;
 }
 h1, .writer{
     color:#6C0094;
