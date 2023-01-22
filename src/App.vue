@@ -4,6 +4,7 @@
   <About/>
   <Knowledge/>
   <Projects/>
+  <Contact/>
 </template>
 
 <script>
@@ -12,6 +13,7 @@ import Home from './components/Home.vue'
 import About from './components/About.vue';
 import Knowledge from './components/Knowledge.vue';
 import Projects from './components/Projects.vue';
+import Contact from './components/Contact.vue';
 
 export default{
   components:{
@@ -19,7 +21,8 @@ export default{
     Home,
     About,
     Knowledge,
-    Projects
+    Projects,
+    Contact
 }
 }
 </script>

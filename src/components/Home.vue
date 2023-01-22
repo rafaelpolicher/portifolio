@@ -121,7 +121,9 @@ a{
   border: 1px solid #0F9410;
     border-radius: 10px;
     padding: .5rem 3rem;
+    text-transform: uppercase;
     transition: .3s;
+    letter-spacing: .3rem;
 }
 a:hover{
     background: #6C0094;

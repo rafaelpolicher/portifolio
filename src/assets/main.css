@@ -9,6 +9,7 @@ li{
 }
 section{
   border-bottom: 1px solid #0F9410;
+  box-sizing: border-box;
 }
 h2{
   color:#6C0094;
@@ -18,4 +19,7 @@ h2{
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+}
+p, a, h3{
+  font-family: 'Open Sans', 'Helvetica Neue', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

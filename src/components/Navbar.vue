@@ -7,17 +7,18 @@
                 <span></span>
                 <span></span>
             </a></li>
-            <li><a href="#knowledge">Knowledge                         <span></span>
+            <li><a href="#knowledge">Knowledge                         
+                <span></span>
                 <span></span>
                 <span></span>
                 <span></span></a></li>
-            <li><a href="#">Projects
+            <li><a href="#projects">Projects
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </a></li>
-            <li><a href="#">Contact
+            <li><a href="#contact">Contact
                 <span></span>
                 <span></span>
                 <span></span>
@@ -49,13 +50,14 @@ li{
     margin: .5rem;
 }
 a{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #6C0094;
     border: 1px solid transparent;
     border-bottom: 1px solid #0F9410;
     padding: .5rem;
     transition: .7s;
     position: relative;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
 }
 /*a:hover{
     color:#220794;

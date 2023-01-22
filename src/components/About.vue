@@ -9,13 +9,13 @@ As a beginner, I'm willing to learn other technologies and ready to take a step 
 </template>
 
 <style scoped>
-section{
-    height: 80vh;
-}
+
+
 p{
     margin: 4rem;
-    color: #6C0094;
-    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 7rem;
+    color: #785394;
     text-align: center;
+    font-size: 1.5rem;
 }
 </style>
