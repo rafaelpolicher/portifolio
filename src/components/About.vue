@@ -13,7 +13,7 @@ section{
     height: 80vh;
 }
 p{
-    margin:4rem;
+    margin: 4rem;
     color: #6C0094;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;

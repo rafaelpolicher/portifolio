@@ -107,17 +107,21 @@ h1, .writer{
         opacity: 0;
     }
 }
+
 ul{
-    justify-content: center;
-}
-.social{
+    display: flex;
+    height: 100%;
     margin-top: 1rem;
+    margin-left: 4rem;
+}
+li{
+    margin: .5rem;
 }
 a{
-    border: 1px solid #0F9410
-;
+  border: 1px solid #0F9410;
     border-radius: 10px;
     padding: .5rem 3rem;
+    transition: .3s;
 }
 a:hover{
     background: #6C0094;
