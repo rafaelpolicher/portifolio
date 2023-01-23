@@ -1,30 +1,40 @@
 <template>
-    <nav>
-        <ul>
-            <li><a href="#about">About
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a></li>
-            <li><a href="#knowledge">Knowledge                         
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span></a></li>
-            <li><a href="#projects">Projects
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a></li>
-            <li><a href="#contact">Contact
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a></li>
-        </ul>
+    <nav class="nav-menu">
+        <i class="fas fa-bars" @click="showMenu()"></i>
+        
+        <div class="nav-content" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
+            <ul class="nav-content">
+                <li><a href="#home">Home
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a></li>
+                <li><a href="#about">About
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a></li>
+                <li><a href="#knowledge">Knowledge
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span></a></li>
+                <li><a href="#projects">Projects
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a></li>
+                <li><a href="#contact">Contact
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a></li>
+            </ul>
+        </div>
     </nav>
 </template>
 
@@ -35,12 +45,17 @@ export default {
 </script>
 
 <style scoped>
-nav{
+.nav-menu{
     background: black;
-    height: 20vh;
-    border-bottom: 1px solid grey;
+    height: 15vh;
+    overflow: hidden;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    z-index: 100;
+
 }
-ul{
+.nav-content{
     display: flex;
     justify-content: flex-end;
     height: 100%;
@@ -48,6 +63,7 @@ ul{
 }
 li{
     margin: .5rem;
+    margin-top: .5rem;
 }
 a{
     color: #6C0094;
@@ -127,5 +143,40 @@ a span:nth-child(4){
 a:hover span:nth-child(4){
   transform: scaleX(1);
   transform-origin: bottom;
+}
+.label-menu, .checkbox{
+    display: none;
+}
+
+@media screen and (max-width: 830px) {
+    .nav-menu {
+padding-top: 10px;
+position: absolute;
+width: 100%;
+}
+.open-menu {
+opacity: 1;
+height: 150px;
+}
+.closed-menu {
+opacity: 0;
+height: 0;
+padding: 0;
+}
+.nav-content {
+flex-direction: column;
+z-index: 100;
+position: relative;
+transition: all 0.2s ease-out;
+}
+.nav-items {
+flex-direction: column;
+}
+i {
+display: block;
+text-align: right;
+padding: 0 10px 10px 0;
+}
+
 }
 </style>

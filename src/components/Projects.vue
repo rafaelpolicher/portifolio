@@ -1,5 +1,5 @@
 <template>
-    <section id="projects">
+    <section id="projects" v-motion-slide-visible-left>
         <h2>Projects</h2>
         <div class="project-group">
             

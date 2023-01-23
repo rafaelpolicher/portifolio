@@ -1,6 +1,6 @@
 <template>
-    <main>
-        <div class="title">
+    <main id="home">
+        <div class="title" v-motion-fade>
             <h1>Hi, I am Rafael Policher</h1>
             <h1 class="writer">
                 <span class="typed-text">{{ typeValue }}</span>
@@ -9,12 +9,12 @@
             </h1>
             <div class="social">
                 <ul>
-                    <li><a href="">Linkedin</a></li>
-                    <li><a href="">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/rafael-policher-36651724a" target="_blank">Linkedin</a></li>
+                    <li><a href="https://github.com/rafaelpolicher" target="_blank">GitHub</a></li>
                 </ul>
             </div>
         </div>
-        <div class="img">
+        <div class="img" v-motion-slide-visible-right>
             <img src="../../public/img/photo.jpg" alt="">
         </div>
         
@@ -86,6 +86,7 @@ h1, .writer{
     margin-left: 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3rem;
+
 }
 /*.writer::after{
     content: "|";

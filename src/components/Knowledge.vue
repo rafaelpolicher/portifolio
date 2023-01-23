@@ -1,5 +1,5 @@
 <template>
-    <section id="knowledge">
+    <section id="knowledge" v-motion-slide-visible-left>
         <h2>Knowledge</h2>
         <div class="knowledge-img">
             <div class="knowledge-group">
