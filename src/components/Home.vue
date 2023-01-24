@@ -120,6 +120,7 @@ li{
 }
 a{
   border: 1px solid #0F9410;
+  color: #6C0094;
     border-radius: 10px;
     padding: .5rem 3rem;
     text-transform: uppercase;

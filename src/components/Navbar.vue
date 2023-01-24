@@ -1,69 +1,76 @@
-<template>
-    <nav class="nav-menu">
-        <i class="fas fa-bars" @click="showMenu()"></i>
-        
-        <div class="nav-content" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
-            <ul class="nav-content">
-                <li><a href="#home">Home
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a></li>
-                <li><a href="#about">About
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a></li>
-                <li><a href="#knowledge">Knowledge
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span></a></li>
-                <li><a href="#projects">Projects
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a></li>
-                <li><a href="#contact">Contact
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a></li>
-            </ul>
+<!----><template>
+    <nav class="nav-menu"> 
+        <button class="button-mobile" @click="showMenu()">Menu</button>
+            <div class="nav-content">
+                <ul class="nav-items" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
+                    <li><a href="#home">Home
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a></li>
+                    <li><a href="#about">About
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a></li>
+                    <li><a href="#knowledge">Knowledge
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span></a></li>
+                    <li><a href="#projects">Projects
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a></li>
+                    <li><a href="#contact">Contact
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a></li>
+                </ul>
         </div>
     </nav>
 </template>
 
 <script>
-export default {
-    
-}
+    export default {
+        data() {
+            return {
+                showMobileMenu: false,
+                };
+        },
+        methods: {
+            showMenu() {
+                this.showMobileMenu = !this.showMobileMenu;
+            },
+        },
+    };
 </script>
 
 <style scoped>
+button{
+    background: white;
+}
 .nav-menu{
     background: black;
-    height: 15vh;
-    overflow: hidden;
     position: fixed; 
-    top: 0; 
     width: 100%;
-    z-index: 100;
-
+    z-index: 1;
 }
-.nav-content{
+.nav-items{
     display: flex;
     justify-content: flex-end;
-    height: 100%;
     align-items: center;
+    height: 15vh;
 }
 li{
     margin: .5rem;
-    margin-top: .5rem;
+    margin-top: 1rem;
 }
 a{
     color: #6C0094;
@@ -144,39 +151,45 @@ a:hover span:nth-child(4){
   transform: scaleX(1);
   transform-origin: bottom;
 }
-.label-menu, .checkbox{
+.button-mobile{
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
     display: none;
+    cursor: pointer;
 }
 
+
 @media screen and (max-width: 830px) {
-    .nav-menu {
-padding-top: 10px;
-position: absolute;
-width: 100%;
+    .button-mobile{
+    display: block;
 }
-.open-menu {
-opacity: 1;
-height: 150px;
-}
-.closed-menu {
-opacity: 0;
-height: 0;
-padding: 0;
-}
-.nav-content {
-flex-direction: column;
-z-index: 100;
-position: relative;
-transition: all 0.2s ease-out;
-}
-.nav-items {
-flex-direction: column;
-}
-i {
-display: block;
-text-align: right;
-padding: 0 10px 10px 0;
-}
+
+.nav-content{
+    justify-content: center;
+    }
+    li{
+        margin: 1rem;
+    }
+    a , li{
+        background: transparent;
+    }
+
+    .open-menu{
+        opacity: 1;
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
+        background-image: linear-gradient(to bottom, black, #141414);
+    }
+
+    .closed-menu{
+        opacity: 0;
+        display: none;
+        height: 0px;
+        width: 0;
+    }
 
 }
 </style>
