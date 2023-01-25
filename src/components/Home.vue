@@ -1,5 +1,8 @@
 <template>
     <main id="home">
+      <div class="img-mobile" v-motion-slide-visible-right>
+            <img src="../../public/img/photo.jpg" alt="">
+        </div>
         <div class="title" v-motion-fade>
             <h1>Hi, I am Rafael Policher</h1>
             <h1 class="writer">
@@ -86,7 +89,6 @@ h1, .writer{
     margin-left: 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3rem;
-
 }
 /*.writer::after{
     content: "|";
@@ -100,6 +102,8 @@ h1, .writer{
     color: gray;
     animation: blink 1s infinite
 }
+
+
 @keyframes blink{
     0%{
         opacity: 1;
@@ -136,5 +140,46 @@ img{
     border-radius: 50%;
     margin-right: 5rem;
 }
+.img-mobile{
+  display: none;
+}
+@media screen and (max-width: 830px) {
+#home{
+  display: block;
+}
+  .img{
+    display: none;
+    }
+  .img-mobile{
+    display: block;
+    text-align: center;
+  }
+  .img-mobile img{
+    margin: 2rem;
+    margin-top: 5rem;
+  }
 
+  h1, .writer{
+    color:#6C0094;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+h1{
+  margin-top: 2rem;
+}
+
+.writer{
+  margin-bottom: 2rem;
+}
+.social a{
+  border: 1px solid #0F9410;
+  color: #6C0094;
+    border-radius: 10px;
+    padding: .7rem 1rem;
+    text-transform: uppercase;
+    transition: .3s;
+    letter-spacing: .15rem;
+}
+}
 </style>
