@@ -146,6 +146,7 @@ img{
 @media screen and (max-width: 830px) {
 #home{
   display: block;
+
 }
   .img{
     display: none;
@@ -172,15 +173,18 @@ h1{
 .writer{
   margin-bottom: 2rem;
 }
-.social a{
-  border: 1px solid #0F9410;
-  color: #6C0094;
-    border-radius: 10px;
+
+.social{
+  display: flex;
+  justify-content: center;
+}
+a{
+    color: #6C0094;
     padding: .7rem 1rem;
     text-transform: uppercase;
     transition: .3s;
     letter-spacing: .15rem;
-    
 }
+
 }
 </style>

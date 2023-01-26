@@ -5,7 +5,7 @@
         </div>
         <div >
             <p><img src="../../public/img/linkedin.png" alt=""> <a href="https://www.linkedin.com/in/rafael-policher-36651724a" target="_blank">Rafael Policher</a></p>
-            <p><img src="../../public/img/gmail.png" alt=""> Rafaelpolicher@gmail.com</p>
+            <p><img src="../../public/img/gmail.png" alt=""> rafaelpolicher@gmail.com</p>
         </div>
     </section>
 </template>

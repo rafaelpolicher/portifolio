@@ -1,6 +1,6 @@
 <!----><template>
     <nav class="nav-menu"> 
-        <button class="button-mobile" @click="showMenu()">Menu</button>
+        <button class="button-mobile" @click="showMenu()"></button>
             <div class="nav-content">
                 <ul class="nav-items" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
                     <li><a href="#home">Home
@@ -152,20 +152,32 @@ a:hover span:nth-child(4){
   transform-origin: bottom;
 }
 .button-mobile{
-    width: 50px;
-    height: 50px;
-    background: white;
-    border-radius: 50%;
     display: none;
-    cursor: pointer;
 }
+
 
 
 @media screen and (max-width: 830px) {
     .button-mobile{
     display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 1rem;
+    padding-bottom:7px ;
+    background-color:black;
 }
-
+.button-mobile:before{
+    content: "";
+        display: inline-block;
+        height: 2px;
+        width: 40px;
+        background: #6C0094;
+        box-shadow: 0 8px #6C0094, 0 -8px #6C0094;
+        border-radius: 5px;
+        transition: .3s;
+}
 .nav-content{
     justify-content: center;
     }
