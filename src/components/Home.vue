@@ -180,6 +180,7 @@ h1{
     text-transform: uppercase;
     transition: .3s;
     letter-spacing: .15rem;
+    
 }
 }
 </style>
