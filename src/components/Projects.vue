@@ -24,9 +24,10 @@
                 </ul>
             </div>
             <div class="project">
-                <img class="main-img" src="../../public/img/soon.jpg" alt="">
-                <h3>Soon</h3>
-                <p>A React.js project coming soon</p>
+                <a href="https://rafaelpolicher.github.io/costs/" target="_blank">
+                <img class="main-img" src="../../public/img/costs.png" alt=""></a>
+                <h3>Costs</h3>
+                <p>A website to manage your project finances</p>
                 <ul>
                     <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt=""> HTML</li>
                     <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt=""> CSS</li>
@@ -69,5 +70,8 @@ img{
 }
 img:hover{
     filter: grayscale(0);
+}
+ul{
+    margin-top: .5rem;
 }
 </style>
