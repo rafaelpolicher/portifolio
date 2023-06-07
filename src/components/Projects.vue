@@ -14,13 +14,17 @@
                 </ul>
             </div>
             <div class="project">
-                <a href="https://rafaelpolicher.github.io/Calculator/" target="_blank"><img class="main-img" src="../../public/img/calc.png" alt=""></a>
-                <h3>Calc</h3>
-                <p>An complete caulculator</p>
+                <a href="http://bookrating.x10.mx/" target="_blank"><img class="main-img" src="../../public/img/bookrating.png" alt=""></a>
+                <h3>Bookrating</h3>
+                <p>An book reviews website</p>
                 <ul>
                     <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt=""> HTML</li>
                     <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt=""> CSS</li>
+                    <li>Materialize CSS</li>
                     <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt=""> JavaScript</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" /> PHP </li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" /> Laravel </li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /> MySQL</li>
                 </ul>
             </div>
             <div class="project">
